@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:shape="rectangle">
+
+    <gradient
+        android:type="linear"
+        android:angle="0"
+        android:endColor="@color/gradStop"
+        android:startColor="@color/gradStart"
+        />
+
+</shape>
