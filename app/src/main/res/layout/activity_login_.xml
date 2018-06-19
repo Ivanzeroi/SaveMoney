@@ -110,6 +110,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/btnIniciarSesion"
                 android:text="Iniciar Sesion"
                 android:textSize="16dp"
                 android:textColor="@color/white"
