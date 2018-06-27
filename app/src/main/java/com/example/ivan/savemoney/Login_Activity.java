@@ -55,16 +55,32 @@ public class Login_Activity extends AppCompatActivity {
                 email = edtUser.getText().toString();
                 password = edtPass.getText().toString();
 
-
+                if(email.isEmpty()){
+                    Toast.makeText(Login_Activity.this,"Ingresa un usuario",Toast.LENGTH_LONG).show();
+                }else if(password.isEmpty()){
+                    Toast.makeText(Login_Activity.this,"Ingresa una contraseña",Toast.LENGTH_LONG).show();
+                }else{
 
                 auth.signInWithEmailAndPassword(email,password)
                         .addOnCompleteListener(Login_Activity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
-
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    Log.d("1", "signInWithEmail:success");
+                                    FirebaseUser user = auth.getCurrentUser();
+                                    Intent intent = new Intent(Login_Activity.this,HomeActivity.class);
+                                    startActivity(intent);
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Log.w("2", "signInWithEmail:failure", task.getException());
+                                    Toast.makeText(Login_Activity.this, "Authentication failed.",Toast.LENGTH_SHORT).show();
+                                }
                             }
                 });
+
+                }
             }
         });
 
