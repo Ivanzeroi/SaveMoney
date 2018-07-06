@@ -1,0 +1,11 @@
+html, body {
+    /*background: #efeaea; */
+}
+
+#chart {
+    position: relative;
+    margin: 0 auto;
+    width:335px;
+    height: 255px;
+    display: inline-block;
+}
