@@ -11,7 +11,7 @@
         android:roundIcon="@drawable/icons8_icono_ahorro"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login_Activity">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +21,7 @@
 
 
 
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".Login_Activity"></activity>
     </application>
 
 </manifest>
