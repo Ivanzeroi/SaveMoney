@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#607D8B</color>
+    <!--Colores principales-->
+    <color name="colorPrimary">#6600cc</color>
     <color name="colorPrimaryDark">#4A148C</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00000000</color>
     <color name="gradStart">#4A148C</color>
     <color name="gradStop">#880E4F</color>
+
+    <!--Colores para el boton flotante-->
+    <color name="negro_semitransparente">#B2000000</color>
+    <color name="blanco">#fafafa</color>
 </resources>

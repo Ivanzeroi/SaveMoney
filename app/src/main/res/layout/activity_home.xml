@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.design.widget.CoordinatorLayout
+<RelativeLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context=".HomeActivity">
 
     <android.support.v4.widget.SwipeRefreshLayout
@@ -17,23 +18,106 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="match_parent"
         tools:ignore="MergeRootFrame" >
 
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
 
-
-            <WebView
-                android:id="@+id/graficasMoneyPie"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></WebView>
+                android:layout_height="fill_parent">
+
+                <WebView
+                    android:id="@+id/graficasMoneBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></WebView>
+
+                <WebView
+                    android:id="@+id/graficasMoneyPie"
+                    android:layout_below="@+id/graficasMoneBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </WebView>
 
 
+            </RelativeLayout>
+
+        </ScrollView>
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/floatingBtnMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@drawable/icons8mas48" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        fab:fab_addButtonColorNormal="@color/colorPrimaryDark"
+        fab:fab_addButtonColorPressed="@color/colorPrimaryDark"
+        fab:fab_addButtonSize="normal"
+        fab:fab_labelStyle="@drawable/background_label_fab"
+        fab:fab_labelsPosition="left">
 
-</android.support.design.widget.CoordinatorLayout>
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingBtnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/icons8menos48"
+            fab:fab_title="Eliminar Dinero"
+            fab:fab_colorNormal="@color/colorPrimaryDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_labelStyle="@drawable/grad_bg"
+            >
+
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingBtnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/icons8maas48"
+            fab:fab_title="Agregar Dinero"
+            fab:fab_colorNormal="@color/colorPrimaryDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_labelStyle="@drawable/grad_bg"
+            >
+
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingBtnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/icons8flechaadelantefilled50"
+            fab:fab_title="Compartir"
+            fab:fab_colorNormal="@color/colorPrimaryDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_labelStyle="@drawable/grad_bg"
+            >
+
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <!--
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingBtnDelet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/icons8menos48"
+        />
+        -->
+
+</RelativeLayout>
