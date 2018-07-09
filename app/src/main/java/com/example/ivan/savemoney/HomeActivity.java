@@ -162,7 +162,7 @@ public class HomeActivity extends AppCompatActivity {
                 "{"+
                 " name:'Ivan',"+
                 " type:'bar',"+
-                "data:[1000,1000,2000],"+
+                "data:[10,1000,300],"+
                 "}]};";
 
 

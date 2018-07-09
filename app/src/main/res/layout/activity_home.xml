@@ -58,7 +58,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         fab:fab_addButtonColorNormal="@color/colorPrimaryDark"
         fab:fab_addButtonColorPressed="@color/colorPrimaryDark"
         fab:fab_addButtonSize="normal"
-        fab:fab_labelStyle="@drawable/background_label_fab"
+        fab:fab_labelStyle="@style/Etiquetas"
         fab:fab_labelsPosition="left">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
@@ -70,7 +70,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             fab:fab_title="Eliminar Dinero"
             fab:fab_colorNormal="@color/colorPrimaryDark"
             fab:fab_colorPressed="@color/colorPrimaryDark"
-            fab:fab_labelStyle="@drawable/grad_bg"
             >
 
         </com.getbase.floatingactionbutton.FloatingActionButton>
@@ -84,7 +83,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             fab:fab_title="Agregar Dinero"
             fab:fab_colorNormal="@color/colorPrimaryDark"
             fab:fab_colorPressed="@color/colorPrimaryDark"
-            fab:fab_labelStyle="@drawable/grad_bg"
             >
 
         </com.getbase.floatingactionbutton.FloatingActionButton>
@@ -98,7 +96,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             fab:fab_title="Compartir"
             fab:fab_colorNormal="@color/colorPrimaryDark"
             fab:fab_colorPressed="@color/colorPrimaryDark"
-            fab:fab_labelStyle="@drawable/grad_bg"
             >
 
         </com.getbase.floatingactionbutton.FloatingActionButton>
