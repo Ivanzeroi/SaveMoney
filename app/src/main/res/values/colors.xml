@@ -3,7 +3,7 @@
     <!--Colores principales-->
     <color name="colorPrimary">#6600cc</color>
     <color name="colorPrimaryDark">#4A148C</color>
-    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorAccent">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00000000</color>
     <color name="gradStart">#4A148C</color>
@@ -12,4 +12,7 @@
     <!--Colores para el boton flotante-->
     <color name="negro_semitransparente">#B2000000</color>
     <color name="blanco">#fafafa</color>
+
+    <!--Colores para los dialogos-->
+    <color name="backdialog">#797D7F</color>
 </resources>

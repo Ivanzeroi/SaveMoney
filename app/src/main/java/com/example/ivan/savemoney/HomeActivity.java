@@ -1,15 +1,21 @@
 package com.example.ivan.savemoney;
 
 import android.graphics.Bitmap;
+
+import com.example.ivan.savemoney.Dialogs.AddDialog;
+import com.getbase.floatingactionbutton.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 
 public class HomeActivity extends AppCompatActivity {
 
     private WebView graficasPie,graficasBar;
+    private FloatingActionButton floatingBtnAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +27,23 @@ public class HomeActivity extends AppCompatActivity {
         graficasBar.getSettings().setJavaScriptEnabled(true);
         cargarGraficaPie();
         cargarGraficaBar();
+
+        floatingBtnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddDialog dialog = new AddDialog();
+                dialog.show(getSupportFragmentManager(),"Dialog Add");
+                dialog.setCancelable(false);
+            }
+        });
+
         }
 
 
     private void inicializarViews(){
         graficasPie = (WebView) findViewById(R.id.graficasMoneyPie);
         graficasBar = (WebView) findViewById(R.id.graficasMoneBar);
+        floatingBtnAdd = (FloatingActionButton) findViewById(R.id.floatingBtnAdd);
     }
 
     private void cargarGraficaPie(){

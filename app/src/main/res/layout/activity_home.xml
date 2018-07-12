@@ -100,7 +100,18 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
         </com.getbase.floatingactionbutton.FloatingActionButton>
 
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingBtnExportBD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/icons8exportacindebasededatos64"
+            fab:fab_title="Exportar BD"
+            fab:fab_colorNormal="@color/colorPrimaryDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            >
 
+        </com.getbase.floatingactionbutton.FloatingActionButton>
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
