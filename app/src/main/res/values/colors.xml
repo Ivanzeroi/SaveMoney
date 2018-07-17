@@ -15,4 +15,8 @@
 
     <!--Colores para los dialogos-->
     <color name="backdialog">#797D7F</color>
+
+    <!--Color del Background del modalDialog-->
+    <color name="colorLeft">#4A148C</color>
+    <color name="colorRight">#c0c0c0</color>
 </resources>

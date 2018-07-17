@@ -37,6 +37,15 @@ public class AddDialog extends DialogFragment{
         });
 
 
+        btnAddMoney.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
+
+
+
         final AlertDialog dialog = builder.create();
         dialog.show();
         return dialog;
@@ -44,5 +53,6 @@ public class AddDialog extends DialogFragment{
 
     private void inicializarCampos(View view) {
         btnCancel = (Button) view.findViewById(R.id.btnCancel);
+        btnAddMoney = (Button) view.findViewById(R.id.btnAddMoney);
     }
 }
