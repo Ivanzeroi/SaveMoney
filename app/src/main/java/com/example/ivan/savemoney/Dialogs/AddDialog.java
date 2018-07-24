@@ -22,7 +22,7 @@ public class AddDialog extends DialogFragment{
     public AddDialog(){
     }
     @Override
-    public Dialog onCreateDialog(final Bundle savedInstanceState){ //savedInstanceState){
+    public Dialog onCreateDialog(final Bundle savedInstanceState){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         final LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_add,null);

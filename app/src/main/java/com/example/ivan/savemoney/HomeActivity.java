@@ -3,6 +3,7 @@ package com.example.ivan.savemoney;
 import android.graphics.Bitmap;
 
 import com.example.ivan.savemoney.Dialogs.AddDialog;
+import com.example.ivan.savemoney.Dialogs.WelcomeDialog;
 import com.getbase.floatingactionbutton.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,17 +17,24 @@ public class HomeActivity extends AppCompatActivity {
 
     private WebView graficasPie,graficasBar;
     private FloatingActionButton floatingBtnAdd;
+    private String usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        usuario = getIntent().getExtras().getString("User");
+
         inicializarViews();
         graficasPie.getSettings().setJavaScriptEnabled(true);
         graficasBar.getSettings().setJavaScriptEnabled(true);
         cargarGraficaPie();
         cargarGraficaBar();
+
+        WelcomeDialog dialog = new WelcomeDialog(usuario);
+        dialog.show(getFragmentManager(),"WelcomeDialog");
+        dialog.setCancelable(false);
 
         floatingBtnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
