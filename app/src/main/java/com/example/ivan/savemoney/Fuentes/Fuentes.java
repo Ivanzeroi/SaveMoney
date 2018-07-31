@@ -15,4 +15,7 @@ public class Fuentes {
     public static Typeface WelcomeWarWound(Context context){
         return Typeface.createFromAsset(context.getAssets(),"fonts/WarWound.otf");
     }
+    public static Typeface ChallengeCountour(Context context){
+        return Typeface.createFromAsset(context.getAssets(),"fonts/ChallengeContour.ttf");
+    }
 }

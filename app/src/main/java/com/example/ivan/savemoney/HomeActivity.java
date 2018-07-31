@@ -4,13 +4,19 @@ import android.graphics.Bitmap;
 
 import com.example.ivan.savemoney.Dialogs.AddDialog;
 import com.example.ivan.savemoney.Dialogs.WelcomeDialog;
+import com.example.ivan.savemoney.Fuentes.Fuentes;
 import com.getbase.floatingactionbutton.*;
+
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 
 public class HomeActivity extends AppCompatActivity {
@@ -18,6 +24,8 @@ public class HomeActivity extends AppCompatActivity {
     private WebView graficasPie,graficasBar;
     private FloatingActionButton floatingBtnAdd;
     private String usuario;
+    private TextView tvPerdida,tvTotalPerdida,tvGanancia,tvTotalAhorro;
+    private int totalPerdida = 0,totalAhorro = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +53,22 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        tvTotalPerdida.setText("Total: $ " + totalPerdida);
+        tvTotalAhorro.setText("Total: $ " + totalAhorro);
         }
 
 
     private void inicializarViews(){
         graficasPie = (WebView) findViewById(R.id.graficasMoneyPie);
         graficasBar = (WebView) findViewById(R.id.graficasMoneBar);
+        tvPerdida = (TextView) findViewById(R.id.tvPerdida);
+        tvPerdida.setTypeface(Fuentes.ChallengeCountour(this));
+        tvTotalPerdida = (TextView) findViewById(R.id.tvTotalPerdida);
+        tvTotalPerdida.setTypeface(Fuentes.ChallengeCountour(this));
+        tvGanancia = (TextView) findViewById(R.id.tvAhorro);
+        tvGanancia.setTypeface(Fuentes.ChallengeCountour(this));
+        tvTotalAhorro = (TextView) findViewById(R.id.tvTotalAhorro);
+        tvTotalAhorro.setTypeface(Fuentes.ChallengeCountour(this));
         floatingBtnAdd = (FloatingActionButton) findViewById(R.id.floatingBtnAdd);
     }
 
